@@ -1,1 +1,1 @@
-# firebasegroupchat
+# Firebase group chat demo
