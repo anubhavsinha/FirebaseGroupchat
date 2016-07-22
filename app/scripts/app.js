@@ -20,11 +20,12 @@ function logout(){
 ///callback when users session changes
 firebase.auth().onAuthStateChanged(function(result){
 	if(result){
+		var user = firebase.auth().currentUser;
 		logincontrol.style.display = "none";
 		inputcontrol.style.display="block";
 		userimage.style.display = "inline-block";
-		userimage.src = auth.currentUser.photoURL;
-		username.innerHTML = auth.currentUser.displayName;
+		userimage.src = user.photoURL;
+		username.innerHTML = user.displayName;
 	}else{
 		logincontrol.style.display = "block";
 		inputcontrol.style.display="none";
