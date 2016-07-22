@@ -1,0 +1,101 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.8/css/bootstrap-material-design.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.8/css/ripples.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <div class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>        
+                <a class="navbar-brand" href="javascript:void(0)">Group Chat @ Java Africa</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-inverse-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                            <img id="userimage" class="img-circle avatar"> &nbsp; <span id="username"></span>
+                            <span class="mdi-navigation-expand-more"></span>
+                        </a>
+                        
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="" onclick="return logout()">
+                                    <i class="mdi-action-exit-to-app"></i> Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+            
+            <div class="list-group">
+
+
+                <!--login control-->
+                <div id="logincontrol" class="title">
+                    <button class="facebook-oauth-button btn btn-raised" onclick="login()">
+                        <i class="icon"></i>
+                        <span>Log in to ICJ Chat</span>
+                    </button>
+                    <hr class="separator">
+                </div>
+
+                <!--message input control-->
+                <div id="inputcontrol" class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                        </div>
+                        <form onsubmit="return addToList()">
+                            <input id="message" type="text" class="form-control" placeholder="Type your message">
+                        </form>
+                    </div>
+                </div>
+
+                <!--list messages-->
+                <div id="messages" class="list-group-item">
+                   
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.8/js/material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.8/js/ripples.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.material.init();
+        });
+    </script>
+    
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+    <script src="scripts/app.js"></script>
+
+</body>
+</html>

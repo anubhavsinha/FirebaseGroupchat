@@ -1,0 +1,39 @@
+.title {
+  text-align: center;
+  border-bottom: 10px red;
+}
+.img-circle.avatar {
+  width: 30px;
+}
+
+.separator{
+    border-color:red;
+}
+
+.message{
+	word-wrap: break-word;
+	margin: 1px;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.facebook-oauth-button {
+    font-size: 1rem;
+    display: block;
+    margin: 0 auto 15px;
+    border: none;
+    background-color: #3c5a99 !important;
+    color: #fff !important;
+}
+
+
+.facebook-oauth-button .icon {
+    background-repeat: no-repeat;
+    background-position: -315px -21px;
+    width: 23px;
+    height: 28px;
+    display: inline-block;
+    background-image: url(/images/sprite-no-repeat.svg);
+    vertical-align: middle;
+}
